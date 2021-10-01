@@ -94,8 +94,12 @@ app.get("/brand", async (req, res) => {
 });
 
 app.get("/login", async (req, res) => {
+  try{
   const data=await User.find().lean().exec();
   return res.send(data);
+}catch(err){
+  return res.status(400).send(err.message);
+}
 });
 
 
