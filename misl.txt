@@ -1,0 +1,1 @@
+mongodb+srv://seema:seema123@cluster0.pgyqv.mongodb.net/spareshub?retryWrites=true&w=majority

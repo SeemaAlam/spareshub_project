@@ -1,0 +1,620 @@
+/*================== common styles ========================*/
+
+:root{
+    --gray1:#777;
+    --blue1:#08c;
+    --red1:#eb4d4b;
+    --sky1:#52b9b5;
+    --graylight:#ddd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--gray1);
+}
+/*==================End common styles ========================*/
+
+/*==================Home ========================*/
+
+/*==================End Home========================*/
+
+/*================== Account ========================*/
+.forget{
+    font-size:small;
+     margin-left:15px;
+      color:var(--blue1);
+}
+.media{
+    margin-top:1.5rem;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    margin-left: -10px;
+}
+.mid{
+    margin-top:1.5rem;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    padding:0.8rem;
+    border: 0.5px solid var(--graylight);
+    border-radius: 9px;
+   border-top: solid 4px var(--blue1);
+}
+.fb,.gl,.fb2,.gl2{
+    color: #fff;
+}
+@media only screen and (max-width:990px){
+    .social2{
+        margin-top:10px;
+    }
+}
+@media only screen and (max-width:550px){
+    .social{
+        margin-top:10px;
+    }
+    .mid,.new{
+        margin:5px;
+        box-sizing: border-box;
+    }
+}
+.social{
+    width:250px; ;
+}
+
+.create{
+    background-color: var(--blue1);
+}
+.new{
+    margin-top: 1.5rem;
+}
+.new>p{
+ font-size: x-large;
+ color: var(--blue1);
+ font-weight: lighter;
+ margin-left: -10px;
+}
+.pi,.si{
+   color: var(--blue1);
+}
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+}
+.btn-google {
+    color: #fff;
+    background-color: red;
+    border-color: rgba(219, 54, 54, 0.2);
+}
+
+
+.btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-social:hover {
+    color: #eee;
+}
+
+.btn-social :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    padding: 7px;
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    box-sizing: border-box;
+
+}
+/*================== End Account ========================*/
+
+/*================== topbar ========================*/
+.topbar{
+    background-color: var(--graylight);
+    border-radius: 5px;
+}
+.topbar>ul{
+  font-size:x-small;
+}
+.wc{
+    color: var(--gray1);
+  }
+.blue{
+    color: var(--blue1);
+}
+
+/*================== products ========================*/
+
+/*================== end topbar ========================*/
+
+
+/*================== products ========================*/
+
+.product-grid{
+    text-align: center;
+}
+.product-grid .product-image{ position: relative; }
+.product-grid .product-image a.image{ display: block; }
+.product-grid .product-image img{
+    width: 100%;
+    height: auto;
+}
+.product-image .pic-1{
+    opacity: 1;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-grid:hover .product-image { opacity: 1; }
+.product-grid .product-sale-label,
+.product-grid .product-discount-label{
+    color: #fff;
+    background: #da5555;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    padding: 5px 11px;
+    border-radius: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 0.4s ease;
+}
+.product-grid .product-sale-label{
+    background: #2ba968;
+    text-transform: uppercase;
+    left: 10px;
+    right: auto;
+}
+.product-grid .product-content{ padding: 12px; }
+.product-grid .rating{
+    padding: 0;
+    margin: 0 0 7px;
+    list-style: none;
+}
+.product-grid .rating li{
+    color: var(--gray1);
+    font-size: 12px;
+    display: inline-block;
+}
+.product-grid .rating li.disable{ color: rgba(0,0,0,.20); }
+.product-grid .title{
+    color: var(--gray1);
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 7px;
+}
+.product-grid .title a{
+    color: var(--gray1);
+    transition: all 500ms;
+}
+.product-grid .title a:hover{ color: var(--main-color1); }
+.product-grid .price{
+    color: var(--gray1);
+    font-size: 18px;
+    letter-spacing: 0.005em;
+    margin-bottom: 10px;
+}
+.product-grid .price span{
+    color: #a7a7a7;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.product-grid .product-button-group{
+    position: relative;
+    z-index: 1;
+}
+.product-grid .add-to-cart{
+    color: black;
+    background: #fff;
+    font-size: 14px;
+    width: calc(100% - 75px);
+    padding: 8px 3px;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius:3px;
+    border:var(--gray1) 0.5px solid;
+}
+.product-grid .add-to-cart i{
+    margin-right: 8px;
+    transition: all 0.25s ease 0s;
+    color: #000;
+}
+.product-grid:hover .add-to-cart{
+    color:#fff;
+    background: var(--blue1);
+}
+.product-grid:hover .add-to-cart i{
+    display: inline-block;
+    visibility: visible;
+}
+.product-grid .product-like-icon,
+.product-grid .product-compare-icon{
+    color: var(--text-color);
+    background: #f4f4f4;
+    line-height: 34px;
+    width: 34px;
+    height: 34px;
+    opacity: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: -1;
+    transition: all 0.25s ease 0s;
+}
+.product-grid .product-compare-icon{
+    left: auto;
+    right: 50px;
+}
+.product-grid:hover .product-like-icon{
+    opacity: 1;
+    left: 0;
+    color: var(--red1);
+    border: solid 0.3px var(--red1);
+}
+.product-grid:hover .product-compare-icon{
+    opacity: 1;
+    right: 0;
+    color: var(--sky1);
+    border: solid 0.3px var(--sky1);
+}
+.product-like-icon i{
+    color: var(--red1);
+}
+.product-compare-icon i{
+    color: var(--sky1); 
+}
+
+.rating{
+    color:var(--gray1);
+}
+
+.productsdiv{
+    margin-top:200px;
+    padding-top: 0;
+    }
+
+
+
+@media only screen and (max-width:990px){
+    .product-grid{ margin-bottom: 30px;
+ }
+ .productsdiv{
+margin-top:-4rem;
+padding-top: 0;
+}
+.slider{
+    height: 320px;
+}
+.slider img{
+    height:290px;
+}
+}
+
+@media only screen and (min-width:1024px){
+    .colmed{
+        width:20%;
+       }
+       .slider{
+        height:100%;
+     }
+}
+
+/*================== End products ========================*/
+
+/*================== slider ========================*/
+
+#carouselExampleControls{
+    height: 500px;
+}
+
+/*================== End slider ========================*/
+
+/*================== header ========================*/
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    background-color:rgb(255, 255, 255);
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+ 
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+    margin-top: 10px;
+  }
+
+  .header-right ul{
+    margin-right:100px;
+  }
+  
+  #customercare{
+      color:var(--blue1);
+  }
+  #customercare:nth-child(1){
+      font-weight: bold;
+  }
+
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+   
+    }
+    .header-right {
+      float: none;
+
+    }
+    .header-right li{
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+       .cartdiv #cart{
+        top:80px;;
+        position:absolute;
+       }
+  }
+
+
+#search{
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  vertical-align: baseline;
+  width: 300px;
+  box-sizing: border-box;
+  position: static;
+  margin: 0;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 50px 10px 20px;
+  left: -9999px;
+  background-color: #fff;
+  color: #777;
+  border-color: #dbe0e2;
+  padding: 12px;
+  margin-top: 20px;
+  margin-left:20px;
+}
+
+.cartdiv{
+ float:right;
+ right: 60px;
+ position:absolute;
+ top:80px;
+}
+
+#cart{
+    color: var(--blue1);
+    font-size:xxx-large ;
+}
+
+/*================== end header ========================*/
+
+
+/*================== dropdown ========================*/
+
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	/* .navbar .nav-item:hover .nav-link{   } */
+	.navbar .nav-item:hover .dropdown-menu{ display:flex; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+.dropdown-menu{
+    overflow: hidden;
+    /* width: 60%; */
+}
+.menu2{
+    background-color:var(--graylight);
+    font-size: small;
+    font-weight: bold;
+    border-radius:4px;
+    color: var(--blue1);
+}
+
+#menu-item1,
+#menu-item2,
+#menu-item3,
+#menu-item4,
+#menu-item5
+{
+color:var(--blue1);
+}
+
+#menu-item1:hover{
+    background-color: var(--blue1);
+    color:#fff;
+}
+
+@media screen and (max-width: 500px) {
+    .menu2{
+    margin-bottom: 30px;
+    }
+}
+/*================== end dropdown ========================*/
+
+/*================== cart ========================*/
+
+.order{
+    background-color: var(--blue1);
+    width: 400px;
+    padding:10px;
+    border-radius: 3px;
+}
+.discount{
+    background-color: var(--blue1);
+    color: #fff;
+}
+@media screen and (max-width: 500px) {
+    .order{
+    margin-bottom: 30px;
+    }
+}
+
+/*================== end cart ========================*/
+/*================== brands ========================*/
+.maindiv{
+    margin-top: 20px;
+}
+
+
+
+.image1{
+  height:200px;
+  width: 200px;
+}
+
+.btndiv{
+   width: 100%;
+   box-sizing: border-box;
+   margin: auto;
+   padding-left: 40px;
+}
+
+#cart2{
+    background-color: var(--blue1);
+    font-size:x-large ;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.price1{
+    font-size:x-large ;  
+    box-sizing: border-box;
+    /* margin: auto;
+    padding-left: 40px; */
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.div2{
+    box-sizing: border-box;
+    text-align: center;
+}
+/*================== end brands ========================*/
+
+/*================== order ========================*/
+
+
+.bs4-order-tracking {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #878788;
+    padding-left: 0px;
+    margin-top: 30px
+}
+
+.bs4-order-tracking li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+    color: #878788;
+    text-align: center
+}
+
+.bs4-order-tracking li:first-child:before {
+    margin-left: 15px !important;
+    padding-left: 11px !important;
+    text-align: left !important
+}
+
+.bs4-order-tracking li:last-child:before {
+    margin-right: 5px !important;
+    padding-right: 11px !important;
+    text-align: right !important
+}
+
+.bs4-order-tracking li>div {
+    color: #fff;
+    width: 29px;
+    text-align: center;
+    line-height: 29px;
+    display: block;
+    font-size: 12px;
+    background: #878788;
+    border-radius: 50%;
+    margin: auto
+}
+
+.bs4-order-tracking li:after {
+    content: '';
+    width: 150%;
+    height: 2px;
+    background: #878788;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 15px;
+    z-index: -1
+}
+
+.bs4-order-tracking li:first-child:after {
+    left: 50%
+}
+
+.bs4-order-tracking li:last-child:after {
+    left: 0% !important;
+    width: 0% !important
+}
+
+.bs4-order-tracking li.active {
+    font-weight: bold;
+    color: var(--blue1);
+}
+
+.bs4-order-tracking li.active>div {
+    background: var(--blue1);
+}
+
+.bs4-order-tracking li.active:after {
+    background: var(--blue1);
+}
+
+.card-timeline {
+    background-color: #fff;
+    z-index: 0
+}
+/*================== end order ========================*/
+
