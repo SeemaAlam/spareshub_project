@@ -508,7 +508,8 @@ color:var(--blue1);
    width: 100%;
    box-sizing: border-box;
    margin: auto;
-   padding-left: 40px;
+   /* padding-left: 40px; */
+   width: 200px;
 }
 
 #cart2{
@@ -516,6 +517,8 @@ color:var(--blue1);
     font-size:x-large ;
     color: #fff;
     margin-bottom: 20px;
+    width: 200px;
+    border-radius: 3px;
 }
 .price1{
     font-size:x-large ;  
