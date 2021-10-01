@@ -128,8 +128,8 @@
         data2.append(tr1);
 
         document.getElementById("order").addEventListener("click",function(){
-            var carte=JSON.parse(localStorage.getItem("cart"));
-            carte=[];
+           JSON.parse(localStorage.getItem("cart"));
+           window.localStorage.removeItem('cart');
         })
   
  });
