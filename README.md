@@ -28,6 +28,8 @@ I tried to clone an e-commerce website spareshub.com, SparesHub is India's leadi
   
 ## Screenshots
 
+![App Screenshot](https://drive.google.com/drive/folders/1InKGVOZAWFmjxI5S3SQ7Jxn1ZAl54HA5?usp=sharing)
+
 ![App Screenshot](https://drive.google.com/file/d/15t0EHSE24ntnOZG9WawCvzVYZ3aqyokW/view?usp=sharing)
 
 ![App Screenshot](https://drive.google.com/file/d/1xXnim4t36GZCG3k5fgEgYt1dR9V-IsbV/view?usp=sharing)
