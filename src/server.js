@@ -42,8 +42,10 @@ app.set("view engine", "hbs");
 app.set("views", temppath);
 hbs.registerPartials(partpath);
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async(req, res) => {
+  const item=await Brand.find().lean().exec();
+  res.render("index",{item:item});
+  //res.render("index",{user:"Seema",login:false});
 });
 
 app.get("/account", (req, res) => {
