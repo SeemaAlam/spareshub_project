@@ -32,7 +32,87 @@
 <script src="../js/bootstrap.js" type="text/javascript"></script>
 </body>
 
+
   <script>
+
+{{!-- async function product(){
+
+ var fetc=await fetch("/brand");
+fetc=await fetc.json();
+
+var div=document.getElementById("maindiv");
+
+var data=fetc.item; --}}
+
+{{!-- data.map((el,index)=>{
+  
+ const htmldata=`<div class="col-md-2 col-sm-6 colmed">
+    <div class="product-grid">
+      <div class="product-image">
+        <a href="#" class="image">
+          <img
+            class="pic-1"
+            src="https://spareshub.com/pub/media/catalog/product/placeholder/default/xno_image_3.png.pagespeed.ic.CL0sy0K3dL.webp"
+          />
+
+        </a>
+
+      </div>
+      <div class="product-content">
+        <ul class="rating">
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+        </ul>
+        <h3 class="title"><a href="#">${el.name}</a></h3>
+        <div class="price">${el.price}</div>
+        <div class="product-button-group" id="click">
+          <a class="product-like-icon" href="#"><i class="fas fa-heart"></i></a>
+          <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>ADD
+            TO CART</a>
+          <a class="product-compare-icon" href="#"><i
+              class="fas fa-signal"
+            ></i></a>
+        </div>
+      </div>
+    </div>
+  </div>`;
+     
+ div.insertAdjacentHTML('beforeend',htmldata);
+
+var btn=document.getElementById("click");
+
+btn.addEventListener("click", function(){
+
+    let arr;
+
+    arr=localStorage.getItem('cart');
+
+    if(arr==null){
+      arr=[];
+    }
+    else{
+      arr=JSON.parse(localStorage.getItem('cart'));
+    }
+
+    arr.push(el)
+
+    console.log(el)
+
+    localStorage.setItem('cart',JSON.stringify(arr))
+   })
+
+  });
+
+
+}
+
+product(); --}}
+
+ 
+
 
 async function product(){
 
@@ -44,7 +124,7 @@ var div=document.getElementById("maindiv");
 var data=fetc.item;
 
 
-data.forEach(function(el){
+data.map((el,index)=>{
   var col=document.createElement("div");
   col.setAttribute("class","col-md-2 col-sm-6 colmed");
   var img=document.createElement("img");
@@ -94,12 +174,14 @@ btndiv.setAttribute("class","btndiv");
    col.append(img,name,div2,btndiv);
 
    div.append(col);
+
+
  });
 
+   
 }
 
 product();
 
-</script>
 </script>
 </html>
