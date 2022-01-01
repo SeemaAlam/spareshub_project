@@ -51,7 +51,7 @@
     </div>
     <div class="col">
       <div class="form-outline">
-        <button type="submit" class="btn btn-primary btn-block mb-4 create" onclick="register()">Create an account</button>
+       <a href="/account"> <button type="submit" class="btn btn-primary btn-block mb-4 create" >Create an account</button></a>
       </div>
     </div>
   </div>
@@ -96,20 +96,34 @@
 
 <script>
 async function loggin(){
+
  var pass=document.getElementById("pass").value;
  var mail=document.getElementById("mail").value;
- var fetc=await fetch("http://localhost:3366/login");
+ var fetc=await fetch("/login");
 fetc=await fetc.json();
+var flag=false;
+var name;
 
  fetc.forEach(function(el){
   if(el.password==pass && el.email==mail){
-    window.location.href="http://localhost:3366/";
-  }
-  else{
-    alert("Invalid credential");
+    flag=true;
+    name=el.name;
+    localStorage.setItem("logname",name)
+    
   }
  });
-}
+
+ if(flag){
+    window.location.href="/";
+   
+ }
+ else{
+   alert("invalid credential")
+ }
+ 
+ }
+ 
+
 
 </script>
 </html>

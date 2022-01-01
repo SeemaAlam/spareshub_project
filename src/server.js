@@ -44,7 +44,7 @@ hbs.registerPartials(partpath);
 
 app.get("/", async(req, res) => {
   const item=await Brand.find().lean().exec();
-  res.render("index",{item:item});
+  return res.render("index",{item:item});
   //res.render("index",{user:"Seema",login:false});
 });
 
@@ -76,13 +76,13 @@ app.post("/index", async (req, res) => {
     {
     const usetData = new User(req.body);
     await usetData.save();
-    res.status(201).render("index");
+    return res.status(201).render("index");
     }
     else{
-      res.send("Enter valid data");
+     return res.render("account");
     }
   } catch (err) {
-    res.status(500).set(error);
+   return res.render("account");
   }
 });
 
