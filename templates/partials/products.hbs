@@ -23,7 +23,7 @@
         </ul>
         <h3 class="title"><a href="#">{{name}}</a></h3>
         <div class="price">{{price}}</div>
-        <div class="product-button-group" onclick="product('{{_id}}')">
+        <div class="product-button-group" onclick="getproduct('{{_id}}')">
           <a class="product-like-icon" href="#"><i class="fas fa-heart"></i></a>
           <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>ADD
             TO CART</a>
@@ -42,7 +42,7 @@
 <script>
 
 
-async function product(el){
+async function getproduct(el){
 
    let data=await fetch(`/brands/${el}`)
 
@@ -52,16 +52,26 @@ async function product(el){
 
  var arr=localStorage.getItem('cart');
 
+
+ 
+
+
     if(arr==null){
       arr=[];
+      let total=0
+      localStorage.setItem('carttotal', 0)
     }
     else{
       arr=JSON.parse(localStorage.getItem('cart'));
+      let total=localStorage.getItem('carttotal');
+      localStorage.setItem('carttotal', total+1 )
+      console.log(localStorage.getItem('carttotal');)
     }
 
     arr.push(val)
 
     localStorage.setItem('cart',JSON.stringify(arr)) 
+
 }
 
 </script>
