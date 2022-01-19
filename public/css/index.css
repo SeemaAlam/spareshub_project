@@ -134,6 +134,7 @@
 
 /*================== products ========================*/
 
+
 /*================== end topbar ========================*/
 
 
@@ -426,7 +427,17 @@ padding-top: 0;
 #cart{
     color: var(--blue1);
     font-size:xxx-large ;
+    position: relative;
 }
+#totalcart{
+    position: absolute;
+    z-index: 4;
+    right: 10px;
+    color:white;
+    font-size: 30px;
+    margin-top:15px;;
+}
+
 
 /*================== end header ========================*/
 

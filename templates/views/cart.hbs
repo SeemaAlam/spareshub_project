@@ -98,8 +98,6 @@
     var total1=0;
     var cartdiv=document.getElementById("cartdiv");
     var carte=JSON.parse(localStorage.getItem("cart"));
-    let total=localStorage.getItem('carttotalofspaere')
-    console.log(total);
 
     var data2=document.getElementById("tbody");
 
@@ -131,6 +129,8 @@
         document.getElementById("order").addEventListener("click",function(){
            JSON.parse(localStorage.getItem("cart"));
            window.localStorage.removeItem('cart');
+           let x=0;
+          localStorage.setItem('carttotalofspaere', x)
         })
   
  });

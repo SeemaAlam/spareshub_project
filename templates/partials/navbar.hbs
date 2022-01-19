@@ -11,14 +11,18 @@
 <li class="call-icon-li">Whatsapp us - <em class="fa fa-whatsapp icon-font-normal" aria-hidden="true" id="customercare"> 9307901458</em></li>
 <li class="call-icon-li">Email us - <em class="fa fa-envelope icon-font-normal" aria-hidden="true" id="customercare"> care@spareshub.com</em></li>
 <div class="cartdiv">
-<a href="/cart"><i class="fas fa-shopping-bag" id="cart" ></i></a>
+<a href="/cart"><i class="fas fa-shopping-bag" id="cart"><span id="totalcart"></span></i></a>
 </div>
+<script>
+   let total=localStorage.getItem('carttotalofspaere');
+   let updatecart=document.getElementById("totalcart").innerHTML=total;
+</script>
+
 </ul>
   
 </div>
 </div>
  
 </div>
-
 
   

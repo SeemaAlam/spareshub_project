@@ -58,19 +58,21 @@ async function getproduct(el){
 
     if(arr==null){
       arr=[];
-      let total=0
-      localStorage.setItem('carttotal', 0)
+      let total=0;
+      let x=0;
+      localStorage.setItem('carttotalofspaere', x)
     }
     else{
       arr=JSON.parse(localStorage.getItem('cart'));
-      let total=localStorage.getItem('carttotal');
-      localStorage.setItem('carttotal', total+1 )
-      console.log(localStorage.getItem('carttotal');)
+     
+ 
     }
 
     arr.push(val)
+    localStorage.setItem('carttotalofspaere', arr.length )
 
-    localStorage.setItem('cart',JSON.stringify(arr)) 
+     localStorage.setItem('cart',JSON.stringify(arr)) 
+    
 
 }
 
