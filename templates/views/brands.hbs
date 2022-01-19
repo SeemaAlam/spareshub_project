@@ -24,9 +24,9 @@
      {{>dropdown}}
 </div>
 <div class="container">
-<div class="maindiv row" id="maindiv">
-  </div>
-
+<div class="container-fluid productsdiv">
+   <p style="font-weight:bolder;">PRODUCT_LIST</p>
+     {{>products}}
 </div>
 <script src="../jq/jquery.js" type="text/javascript"></script>
 <script src="../js/bootstrap.js" type="text/javascript"></script>
@@ -109,79 +109,3 @@ btn.addEventListener("click", function(){
 
 }
 
-product(); --}}
-
- 
-
-
-async function product(){
-
- var fetc=await fetch("/brand");
-fetc=await fetc.json();
-
-var div=document.getElementById("maindiv");
-
-var data=fetc.item;
-
-
-data.map((el,index)=>{
-  var col=document.createElement("div");
-  col.setAttribute("class","col-md-2 col-sm-6 colmed");
-  var img=document.createElement("img");
-  img.src="https://spareshub.com/pub/media/catalog/product/placeholder/default/xno_image_3.png.pagespeed.ic.CL0sy0K3dL.webp"
-  img.setAttribute("class","image1");
-
-   var name=document.createElement("h3");
-   name.setAttribute("class","title");
-   name.innerHTML=el.name;
-
-   var price=document.createElement("p");
-   price.setAttribute("class","price1");
-   price.innerHTML=el.price;
-
-
-var btndiv=document.createElement("div");
-btndiv.setAttribute("class","btndiv");
-
-   var btn=document.createElement("button");
-   btn.innerHTML="Add to cart";
-   btn.setAttribute("id","cart2");
-
-   btn.addEventListener("click", function(){
-
-    let arr;
-
-    arr=localStorage.getItem('cart');
-
-    if(arr==null){
-      arr=[];
-    }
-    else{
-      arr=JSON.parse(localStorage.getItem('cart'));
-    }
-
-    arr.push(el)
-
-    localStorage.setItem('cart',JSON.stringify(arr))
-   })
-
-   var div2=document.createElement("div");
-   div2.setAttribute("class","product-content div2");
-
-  btndiv.append(btn);
-  div2.append(price);
-
-   col.append(img,name,div2,btndiv);
-
-   div.append(col);
-
-
- });
-
-   
-}
-
-product();
-
-</script>
-</html>

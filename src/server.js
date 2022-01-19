@@ -48,6 +48,11 @@ app.get("/", async(req, res) => {
   //res.render("index",{user:"Seema",login:false});
 });
 
+app.get("/brands/:id", async(req, res) => {
+  const item=await Brand.findById(req.params.id);
+  return res.status(200).send({item});
+});
+
 app.get("/account", (req, res) => {
   res.render("account");
 });
@@ -64,8 +69,9 @@ app.get("/cart", (req, res) => {
   res.render("cart");
 });
 
-app.get("/brands", (req, res) => {
-  res.render("brands");
+app.get("/brands", async (req, res) => {
+  const item=await Brand.find().lean().exec();
+  return res.render("brands",{item:item});
 });
 
 app.post("/index", async (req, res) => {
